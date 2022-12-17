@@ -1,0 +1,19 @@
+ public class Student {
+   private int age;
+   public Student (int a){
+        age = a;
+        System.out.println("我今年"+age+"岁了！");
+    }
+
+}
+
+
+
+
+
+public class Exercise {
+    public static void main(String[] args) {
+        Student stu = new Student(18);
+
+    }
+}
