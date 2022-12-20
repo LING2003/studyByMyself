@@ -319,6 +319,8 @@ public static boolean checkCaptcha(String captcha,String inCaptcha){
         for (int i = 0; i < 3; i++) {
             if (verifyPassword(list,username,password)){
                 System.out.println("登录成功");
+                 StudentDemo stu = new StudentDemo();
+                stu.startStudentDemo();
                 break;
             }else {
                 System.out.println("用户名或密码有误");
