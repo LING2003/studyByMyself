@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentDemo {
-    public static void main(String[] args) {
+    public static void startStudentDemo() {
         ArrayList<Student> list = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         //初始菜单
