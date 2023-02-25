@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--   普通注入-->
+    <bean id="student1" name="s1" class="Student" >
+    <property name="name" value="小明">
+    </property>
+</bean>
+    <!--    bean注入-->
+    <bean id="addr" class="Address">
+        <property name="address" value="重庆"/>
+    </bean>
+    <bean id="student2" name="s2" class="Student">
+        <property name="name" value="小明"/>
+        <property name="address" ref="addr"/>
+    </bean>
+<!--    数组注入-->
+    <bean id="student3" name="s3" class="Student">
+        <property name="name" value="小明"/>
+        <property name="address" ref="addr"/>
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+    </bean>
+<!--    List注入-->
+    <bean id="student4" name="s4" class="Student">
+        <property name="hobbys">
+            <list>
+                <value>听山歌</value>
+                <value>爬山</value>
+                <value>种田</value>
+                <value>看电影</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="student5" name="s5" class="Student">
+        <property name="card">
+            <map>
+                <entry key="中国邮政" value="41234222133213442"/>
+                <entry key="中国建设银行" value="545222214525123"/>
+
+            </map>
+        </property>
+    </bean>
+<!--    Set注入-->
+    <bean id="student6" name="s6" class="Student">
+        <property name="games">
+            <set>
+                <value>AOA</value>
+                <value>BOB</value>
+                <value>COC</value>
+            </set>
+        </property>
+    </bean>
+<!--    Null注入-->
+    <bean id="student7" name="s7" class="Student">
+        <property name="couple">
+            <null/>
+        </property>
+    </bean>
+<!--    Properties注入-->
+    <bean id="student8" name="s8" class="Student">
+        <property name="info">
+            <props>
+                <prop key="学号">202104113216</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">lyd</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <context:annotation-config/>
+<!--<bean id="cat111" class="com.lyd.Cat">-->
+<!--    <property name="name" value="小黄"/>-->
+<!--</bean>-->
+    <bean id="cat222" class="com.lyd.Cat">
+        <property name="name" value="瑟夫"/>
+    </bean>
+<bean id="dog" class="com.lyd.Dog">
+    <property name="name" value="大黑"/>
+</bean>
+    <bean id="people" class="com.lyd.People">
+        <property name="name" value="lyd"/>
+    </bean>
+</beans>
